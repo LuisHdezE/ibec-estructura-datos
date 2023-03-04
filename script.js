@@ -61,7 +61,7 @@ console.log(getProductsByCategory('electronic'));
 // 3. Crear una funcion que reciba por parametro el array de productos y su funcion ordenadora como callback. Esta funcion debera devolver el array ordenado de acuerdo al criterio de ordenamiento.
 
 const orderByRetail = (a, b) => a.price - b.price;
-const orderByMajor = (a,b) => 
+const orderByMajor = (a, b) => b.price - a.price;
 
 const orderByPrice = (arrayProduct, callback) => {
   const result = arrayProduct.sort(callback);
@@ -71,5 +71,3 @@ const orderByPrice = (arrayProduct, callback) => {
 console.log(orderByPrice(products, orderByRetail));
 
 console.log(orderByPrice(products, orderByMajor));
-
-
